@@ -14,7 +14,11 @@ Sådan sættes R og Rstudio Server op på en VM via google Cloud:
  
 3)  opdater og installér R
     sudo apt-get update
-    sudo apt-get install r-base
+    sudo apt-get install r-base (og nej, den vil ikke autorisere installationen. Kan ikke få PKP-nøglen til at fungere, grr!, se https://cran.rstudio.com/bin/linux/debian/#secure-apt)
     
+4) Installerer Rstudio server (se https://www.rstudio.com/products/rstudio/download-server/)
 
+    $ sudo apt-get install gdebi-core
+    $ wget https://download2.rstudio.org/rstudio-server-1.0.143-amd64.deb
+    $ sudo gdebi rstudio-server-1.0.143-amd64.deb
 
